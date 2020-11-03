@@ -1,31 +1,23 @@
--- 2017 High Scores over 10k:
--- #1   14993  -  10.16.17  2:57:13 PM
--- #2   14436  -  10.23.17  2:57:13 PM
--- #3   13399  -  10.17.17  2:52:03 PM
--- #4   13341  -  10.02.17  3:40:21 PM
--- #5   13296  -  10.10.17  2:38:32 PM
--- #6   12854  -  10.03.17  2:57:39 PM
--- #7   12676  -  10.18.17  2:52:38 PM
--- #8   12207  -  10.11.17  3:30:10 PM
--- #9   11989  -  10.09.17  4:02:00 PM
--- #10 11803  -  10.04.17  3:17:54 PM
--- #11 11676  -  10.12.17  4:38:55 PM
--- #12 11355  -  10.05.17  3:44:06 PM
--- #13 11205  -  09.25.17  3:57:43 PM
--- #14 10662  -  09.26.17  3:52:17 PM
--- #15 10646  -  09.18.17  4:31:00 PM
--- #16 10464  -  09.27.17  2:46:22 PM
+(**
+ * scrape-google-analytics-AS by Todd Bruss
+ * Safari Browser, Google Analytics WebPage
+ * AppleScript and JavaScript Engine
+ * Requires: Allow JavaScript from Apple Events
+ * in Safari and needs to be set with a wired keyboard
+ * or via an AppleScript that  does the clicks
+ * (off) Update: reloads page at startup and  every hour
+ * (c) 2016-2020 Todd Bruss
+**)
 
--- 2016 High Scores over 10k:
--- #1  12481  -  10.24.16  2:44:49 PM
--- #2  10944  -  10.11.16  3:27:53 PM
+-- uses AppleScript Only
+-- to receive page data in realtime
 
 property todayshigh : 500
 
 property highscore : 14993 -- <-- 2017's high
 
 property currentscore : 0
-set cellphone to "7046419300"
+set cellphone to "7048675309"
 set unbreakable to 50000
 set throttle to 5
 tell application "System Events"
@@ -82,7 +74,7 @@ tell application "System Events"
 					
 					(*try
 						-- This method no longer works
-						-- Text Todd's Cell Phone
+						-- Text Cell Phone
 						do shell script "curl url http://textbelt.com/text -d number=" & cellphone & " -d message=" & quoted form of ("Record High: " & highscore & "  -  " & currentDate)
 					end try *)
 					
